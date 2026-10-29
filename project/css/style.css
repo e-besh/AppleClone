@@ -1,0 +1,708 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* critical for responsive layouts */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+/* ===================== HEADER ===================== */
+/* ===================== HEADER ===================== */
+header {
+  background-color: #fbfbfd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-wrapper {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 5px 16px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+/* Apple logo — always visible */
+.apple-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.apple-logo img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Nav list */
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  gap: 8px;
+  font-size: 0.65rem;
+}
+
+header ul a {
+  text-decoration: none;
+  color: #545455;
+  white-space: nowrap;
+}
+
+header ul img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Hamburger (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  margin-left: auto; /* push to the right */
+}
+
+/* ===================== SHARED SECTIONS ===================== */
+.watch-series,
+.iphone,
+.macbook-neo {
+  height: 480px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+}
+
+.watch-series {
+  background-image: url("../images/home/Screenshot 2026-04-16 190118.png");
+  margin-bottom: 10px;
+}
+
+.watch-series img {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-height: 80px;
+}
+
+.iphone {
+  background-image: url("../images/home/iphones.jpg");
+  margin-bottom: 10px;
+}
+
+.macbook-neo {
+  background-image: url("../images/home/macbook-G.jpg");
+  height: 580px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+h1,
+h2 {
+  margin: 20px 0 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p-tags {
+  margin: 5px 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+/* ===================== BUTTON LINKS ===================== */
+.link-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.link-wrapper a {
+  text-decoration: none;
+  border: 2px solid #0076df;
+  color: #0076df;
+  border-radius: 18px;
+  padding: 6px 15px;
+  display: inline-block;
+  margin: 5px 4px 30px;
+  font-size: 0.85rem;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.link-wrapper a:first-child {
+  color: white;
+  background-color: #0076df;
+}
+
+.link-wrapper a:nth-child(2):hover {
+  background-color: #0076df;
+  color: white;
+}
+
+/* ===================== SPLIT GRID SECTIONS ===================== */
+.ipad-macBook,
+.airpod-business {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
+  padding: 0 12px;
+}
+
+.ipads,
+.macBook-pro,
+.airPods,
+.business {
+  flex: 1 1 50%;
+  min-width: 0; /* allows flex items to shrink below content size */
+  height: 400px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-top: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ipads {
+  background-image: url("../images/home/ipad-air.jpg");
+}
+.macBook-pro {
+  background-image: url("../images/home/macbook-loptop.jpg");
+}
+.airPods {
+  background-image: url("../images/home/airpods.jpg");
+}
+.business {
+  background-image: url("../images/home/business.jpg");
+}
+
+.macbbok-color {
+  padding-top: 10px;
+  color: white;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  padding: 0 16px;
+  background-color: #f5f5f7;
+  margin-top: 20px;
+}
+
+.footer-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #797979;
+  font-size: 0.65em;
+  padding: 20px;
+}
+
+.footer-sentence {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  line-height: 1.6;
+}
+
+.footer-sentence a {
+  color: #494949;
+}
+
+.footer-linksTogether {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.8em;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.footer-linksTogether > div {
+  flex: 1 1 160px;
+  min-width: 150px;
+}
+
+.footer-linksTogether h3 {
+  color: #5c5c5e;
+  font-size: 1.1em;
+  margin: 15px 0 8px;
+}
+
+.footer-linksTogether ul li a {
+  text-decoration: none;
+  color: #7e7e81;
+}
+
+.footer-linksTogether li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.call-centre {
+  border-bottom: 1px solid #acacac;
+  padding: 25px 0;
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 0.75rem;
+}
+
+.call-centre a {
+  color: #0076df;
+  text-decoration: none;
+}
+
+.copyright {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 980px;
+  font-size: 0.75rem;
+}
+
+.copyright ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 5px;
+}
+
+.copyright li a {
+  color: #7e7e81;
+  text-decoration: none;
+}
+
+.copyright li a::after {
+  content: "|";
+  padding-left: 10px;
+  color: #ccc;
+}
+
+.copyright li:last-child a::after {
+  content: "";
+  padding-left: 0;
+}
+
+/* ===================== TABLET (≤ 900px) ===================== */
+@media (max-width: 900px) {
+  body {
+    font-size: 18px;
+  }
+
+  .header-wrapper {
+    height: auto;
+    padding: 8px 16px;
+  }
+
+  header ul {
+    font-size: 0.7rem;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .watch-series,
+  .iphone {
+    height: 420px;
+  }
+  .macbook-neo {
+    height: 480px;
+  }
+
+  .footer-linksTogether > div {
+    flex: 1 1 45%;
+  }
+}
+
+/* ===================== MOBILE (≤ 600px) ===================== */
+@media (max-width: 600px) {
+  /* Header bar: logo left, hamburger right */
+  .header-wrapper {
+    height: 50px;
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  /* Logo stays visible */
+  .apple-logo img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Hamburger visible, pushed right */
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    font-size: 1.4rem;
+  }
+
+  /* Nav collapses into a dropdown panel */
+  header ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fbfbfd;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    gap: 14px;
+    font-size: 0.9rem;
+  }
+
+  header ul.open {
+    display: flex;
+  }
+
+  /* --- Hero sections --- */
+  .watch-series,
+  .iphone,
+  .macbook-neo {
+    height: 380px;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .watch-series {
+    background-position: top center;
+  }
+  .iphone {
+    height: 360px;
+  }
+  .macbook-neo {
+    height: 400px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .p-tags {
+    font-size: 0.9rem;
+  }
+
+  /* --- Stack split sections --- */
+  .ipad-macBook,
+  .airpod-business {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .grid-card {
+    width: 100%; /* Takes full width on mobile */
+    flex: 0 0 auto; /* Prevents flex from squishing it */
+    height: 400px; /* Slightly shorter height for mobile */
+  }
+
+  /* --- Footer --- */
+  footer {
+    padding: 0 12px;
+  }
+  .footer-wrapper {
+    padding: 15px 10px;
+  }
+
+  /* --- Desktop Layout for the new HTML --- */
+  .footer-linksTogether {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on tablet */
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.8em;
+    margin: 20px 0;
+  }
+
+  .footer-group {
+    flex: 1 1 150px; /* Takes up equal space on desktop */
+  }
+
+  /* Hide the desktop arrows so it looks normal */
+  .footer-group summary {
+    list-style: none;
+    pointer-events: none; /* Prevents clicking on desktop */
+    color: #5c5c5e;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .footer-group summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* --- MOBILE ACCORDION STYLES --- */
+  @media (max-width: 600px) {
+    .footer-linksTogether {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .footer-group {
+      flex: 1 1 100%;
+      width: 100%;
+      border-bottom: 1px solid #d2d2d7;
+    }
+
+    /* Re-enable clicking and add styling for mobile */
+    .footer-group summary {
+      pointer-events: auto; /* Allows clicking on mobile */
+      padding: 14px 0;
+      font-size: 0.9rem;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    /* Create the mobile downward arrow */
+    .footer-group summary::after {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid #86868b;
+      border-bottom: 2px solid #86868b;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+      margin-right: 5px;
+    }
+
+    /* Flip arrow up when clicked */
+    .footer-group[open] summary::after {
+      transform: rotate(-135deg);
+    }
+
+    .footer-group ul {
+      padding-bottom: 15px;
+      padding-left: 0;
+    }
+
+    .footer-group ul li {
+      padding: 8px 0;
+    }
+  }
+
+  .copyright {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.7rem;
+  }
+
+  .call-centre {
+    font-size: 0.7rem;
+    padding: 15px 0;
+  }
+}
+/* ===================== TV+ CAROUSEL ===================== */
+.tv-carousel-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000; /* Background behind the carousel */
+  overflow: hidden;
+}
+
+.tv-carousel-track {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snaps to cards */
+  scrollbar-width: none; /* Hides scrollbar on Firefox */
+}
+
+.tv-carousel-track::-webkit-scrollbar {
+  display: none; /* Hides scrollbar on Chrome/Safari */
+}
+
+.tv-card {
+  flex: 0 0 85%; /* Takes up 85% of screen width on mobile */
+  max-width: 980px;
+  height: 450px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  scroll-snap-align: center; /* Snap alignment */
+}
+
+.tv-card-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.tv-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tv-btn:hover {
+  background: #fff;
+}
+
+.tv-text {
+  font-size: 1.1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #444;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+/* ===================== SERVICES GRID ===================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 12px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.service-card {
+  height: 400px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.service-logo {
+  align-self: flex-end;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.service-title {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 60%;
+}
+
+.service-btn {
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.service-btn:hover {
+  background: #f0f0f0;
+}
+
+/* ===================== RESPONSIVE (MOBILE & TABLET) ===================== */
+
+@media (max-width: 900px) {
+  /* Tablet adjustments */
+  .tv-card {
+    flex: 0 0 90%;
+    height: 350px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  /* Mobile adjustments */
+  .tv-card {
+    flex: 0 0 95%;
+    height: 280px;
+  }
+  .tv-card-content {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .tv-text {
+    font-size: 0.85rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Stacks to a single column */
+  }
+  .service-card {
+    height: 300px;
+  }
+}
